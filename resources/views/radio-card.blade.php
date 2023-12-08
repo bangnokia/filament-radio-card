@@ -99,7 +99,7 @@
                         <span class="font-medium text-gray-950 dark:text-white text-center">{{ $label }}</span>
 
                         @if ($hasDescription($value))
-                            <p class="text-gray-500 dark:text-gray-400">
+                            <p class="text-gray-500 dark:text-gray-400 text-xs">
                                 {{ $getDescription($value) }}
                             </p>
                         @endif
