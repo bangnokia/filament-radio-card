@@ -8,7 +8,7 @@ This is a custom input for Filament form, instead of boring Radio buttons, you c
 composer require bangnokia/filament-radio-card
 ```
 
-![img.png](screenshot.png)
+![](screenshot.png)
 
 ## Usage
 
