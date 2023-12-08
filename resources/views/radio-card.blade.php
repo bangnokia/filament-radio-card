@@ -57,9 +57,12 @@
                     }}
                     />
 
-                    <div class="px-4 py-2 w-full items-center justify-center grid place-items-center text-sm leading-6 rounded-lg
-                        ring-1 ring-gray-200
-                        peer-checked:ring-2 peer-checked:ring-primary-500">
+                    <div @class([
+                            "px-4 py-2 w-full items-center justify-center grid place-items-center text-sm leading-6 rounded-lg",
+                            "ring-1 ring-gray-200 dark:ring-gray-700 peer-checked:ring-2 peer-checked:ring-primary-500",
+                            "peer-disabled:bg-gray-100/50 dark:peer-disabled:bg-gray-700/50 peer-disabled:ring-0 peer-disabled:cursor-not-allowed",
+                        ])
+                    >
                         @if ($icon = $getIcon($value))
                             @php
                                 $color = $getColor($value) ?? 'gray';

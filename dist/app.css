@@ -79,6 +79,14 @@
   width: 100%
 }
 
+.cursor-pointer {
+  cursor: pointer
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed
+}
+
 .break-inside-avoid {
   -moz-column-break-inside: avoid;
        break-inside: avoid
@@ -115,6 +123,26 @@
 
 .rounded-lg {
   border-radius: 0.5rem
+}
+
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity))
+}
+
+.bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity))
+}
+
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity))
+}
+
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity))
 }
 
 .px-4 {
@@ -204,6 +232,43 @@
   --tw-ring-color: rgb(234 179 8 / var(--tw-ring-opacity))
 }
 
+.peer:disabled ~ .peer-disabled\:cursor-not-allowed {
+  cursor: not-allowed
+}
+
+.peer:disabled ~ .peer-disabled\:bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity))
+}
+
+.peer:disabled ~ .peer-disabled\:bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity))
+}
+
+.peer:disabled ~ .peer-disabled\:bg-gray-100\/50 {
+  background-color: rgb(243 244 246 / 0.5)
+}
+
+.peer:disabled ~ .peer-disabled\:ring-0 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+}
+
+.peer:disabled ~ .peer-disabled\:ring-transparent {
+  --tw-ring-color: transparent
+}
+
+.peer:disabled ~ .peer-disabled\:ring-offset-0 {
+  --tw-ring-offset-width: 0px
+}
+
+:is(.dark .dark\:bg-gray-800) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity))
+}
+
 :is(.dark .dark\:text-gray-400) {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity))
@@ -217,4 +282,33 @@
 :is(.dark .dark\:text-white) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity))
+}
+
+:is(.dark .dark\:ring-gray-800) {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(31 41 55 / var(--tw-ring-opacity))
+}
+
+:is(.dark .dark\:ring-gray-400) {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(156 163 175 / var(--tw-ring-opacity))
+}
+
+:is(.dark .dark\:ring-gray-700) {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(55 65 81 / var(--tw-ring-opacity))
+}
+
+:is(.dark .peer:disabled ~ .dark\:peer-disabled\:bg-gray-800) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity))
+}
+
+:is(.dark .peer:disabled ~ .dark\:peer-disabled\:bg-gray-700) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity))
+}
+
+:is(.dark .peer:disabled ~ .dark\:peer-disabled\:bg-gray-700\/50) {
+  background-color: rgb(55 65 81 / 0.5)
 }
