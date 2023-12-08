@@ -10,14 +10,7 @@ module.exports = {
     preflight: false,
   },
   theme: {
-    extend: {
-      colors: {
-        danger: colors.rose,
-        primary: colors.yellow,
-        success: colors.green,
-        warning: colors.amber,
-      },
-    },
+    extend: {},
   },
   plugins: [],
 }
