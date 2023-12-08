@@ -1,6 +1,7 @@
 # Filament Radio card Input
 
 This is a custom input for Filament form, instead of boring Radio buttons, you can display them with icons.
+The idea come from my product [ping2.me](https://ping2.me) for selecting the chat provider.
 
 ## Installation
 
