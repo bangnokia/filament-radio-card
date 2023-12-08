@@ -1,0 +1,16 @@
+{
+  "name": "filament-radio-card",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./resources/css/app.css -o ./dist/app.css --watch",
+    "build": "tailwindcss -i ./resources/css/app.css -o ./dist/app.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.3.6"
+  }
+}

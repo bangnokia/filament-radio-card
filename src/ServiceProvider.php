@@ -3,9 +3,11 @@
 namespace BangNokia\FilamentRadioCard;
 
 use Filament\Support\Assets\Css;
+use Filament\Support\Colors\Color;
 use Filament\Support\Facades\FilamentAsset;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use function Filament\Support\get_color_css_variables;
 
 class ServiceProvider extends PackageServiceProvider
 {
@@ -20,11 +22,11 @@ class ServiceProvider extends PackageServiceProvider
 
     public function packageBooted(): void
     {
-//        FilamentAsset::register(
-//            assets: [
-//                Css::make('filament-radio-card', __DIR__ . '/../dist/css/filament-radio-card.css'),
-//            ],
-//            package: static::$name
-//        );
+        FilamentAsset::register(
+            assets: [
+                Css::make('filament-radio-card', __DIR__ . '/../dist/app.css'),
+            ],
+            package: static::$name
+        );
     }
 }

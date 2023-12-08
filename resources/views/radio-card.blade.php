@@ -4,14 +4,13 @@
 
 <x-dynamic-component :component="$getFieldWrapperView()" :field="$field">
     @php
-        $gridDirection = $getGridDirection() ?? 'column';
+        $gridDirection = $getGridDirection();
         $id = $getId();
         $isDisabled = $isDisabled();
-        $isInline = $isInline();
         $statePath = $getStatePath();
+        $isInline = $isInline();
     @endphp
 
-    @capture($content)
     <x-filament::grid
             :default="$getColumns('default')"
             :sm="$getColumns('sm')"
@@ -26,8 +25,9 @@
                     ->merge($getExtraAttributes(), escape: false)
                     ->class([
                         'fi-fo-radio gap-4',
-                        '-mt-4' => (! $isInline) && $gridDirection === 'column',
-                        'flex items-stretch flex-wrap' => $isInline, ])
+                        '-mt-4' => (! $isInline),
+                        'flex items-stretch flex-wrap' => $isInline
+                    ])
             "
     >
         @foreach ($getOptions() as $value => $label)
@@ -37,10 +37,10 @@
 
             <div
                     @class([
-                        'break-inside-avoid pt-4' => (! $isInline) && $gridDirection === 'column',
+                        'break-inside-avoid pt-4' => (! $isInline),
                     ])
             >
-                <label class="flex items-stretch gap-x-3 focus-within:ring-primary-600">
+                <label class="flex w-full items-stretch gap-x-3 focus-within:ring-primary-600">
                     <input
                             @disabled($shouldOptionBeDisabled)
                             id="{{ $id }}-{{ $value }}"
@@ -58,8 +58,8 @@
                     />
 
                     <div class="px-4 py-2 w-full items-center justify-center grid place-items-center text-sm leading-6 rounded-lg
-                        border border-gray-200 dark:border-gray-700
-                        peer-checked:border peer-checked:ring peer-checked:ring-primary-600">
+                        ring-1 ring-gray-200
+                        peer-checked:ring-2 peer-checked:ring-primary-500">
                         @if ($icon = $getIcon($value))
                             @php
                                 $color = $getColor($value) ?? 'gray';
@@ -105,13 +105,4 @@
             </div>
         @endforeach
     </x-filament::grid>
-    @endcapture
-
-    @if ($isInline)
-        <x-slot name="labelSuffix">
-            {{ $content() }}
-        </x-slot>
-    @else
-        {{ $content() }}
-    @endif
 </x-dynamic-component>
