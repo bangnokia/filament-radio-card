@@ -1,0 +1,29 @@
+{
+    "name": "bangnokia/filament-radio-card",
+    "description": "The radio group with card format for Filament",
+    "type": "library",
+    "require": {
+        "php": "^8.1|^8.2|^8.3",
+        "filament/forms": "^3.1",
+        "illuminate/contracts": "^10.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "BangNokia\\FilamentRadioCard\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nguyen Viet",
+            "email": "bang@daudau.cc"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BangNokia\\FilamentRadioCard\\ServiceProvider"
+            ]
+        }
+    }
+}
